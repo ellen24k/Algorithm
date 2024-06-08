@@ -5,5 +5,6 @@
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=ellen24k)](https://github.com/ellen24k/github-readme-stats)
 
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=ellen24k&show_icons=true&theme=radical)
 <br>
 <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
