@@ -3,6 +3,8 @@
 
 프로그래머스 알고리즘 문제 풀이 기록.
 
+[![ellen24k's GitHub stats](https://github-readme-stats.vercel.app/api?username=ellen24k)](https://github.com/ellen24k/github-readme-stats)
+
 ![ellen24k's GitHub stats](https://github-readme-stats.vercel.app/api?username=ellen24k)]
 <br>
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ellen24k)
