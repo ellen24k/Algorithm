@@ -8,7 +8,7 @@ int solution(const char* s) {
     int answer = 0;
     
     for(int i = 0, num; i < strlen(s);){
-        if(s[i] <= 57){ //숫자 48 ~ 57
+        if(s[i] <= '9') {
             num = s[i] - '0';
             i++;
         } else {
