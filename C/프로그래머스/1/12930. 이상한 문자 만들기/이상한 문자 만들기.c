@@ -16,6 +16,9 @@ char* solution(const char* s) {
             continue;
         }
         
+        
+        //대문자 65~90
+        //소문자 97~122
         if(word_index%2==0) {
             if(answer[total_index] >= 'a') answer[total_index] -= 32;
         } else {
