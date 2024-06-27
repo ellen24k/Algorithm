@@ -6,6 +6,6 @@ from
 group by 
     NAME 
 having 
-    count(*) > 1 && NAME is not null
+    COUNT > 1 and NAME is not null
 order by 
     NAME;
