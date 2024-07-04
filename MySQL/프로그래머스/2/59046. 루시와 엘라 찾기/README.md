@@ -1,6 +1,6 @@
 # [level 2] 루시와 엘라 찾기 - 59046 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/59046#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/59046) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@ Empty
 
 ### 제출 일자
 
-2024년 07월 03일 20:02:37
+2024년 07월 04일 21:01:51
 
 ### 문제 설명
 
