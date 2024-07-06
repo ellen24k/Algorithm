@@ -8,6 +8,4 @@ where
     or
     conv(GENOTYPE,10,2) like '%01' 
     or 
-    conv(GENOTYPE,10,2) like '%100' 
-    or 
-    conv(GENOTYPE,10,2) like '%101' 
+    conv(GENOTYPE,10,2) like '%10_';
