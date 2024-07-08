@@ -5,14 +5,14 @@ def solution(n, left, right):
 def make_table(n,left,right):
     table = [0 for i in range(right - left + 1)]
     
-    real_index = left
-    row_weight = real_index//n + 1
-    
+    row_weight = left//n + 1
+    col_weight = left%n + 1
     for index in range(len(table)):
-        table[index] = max(real_index%n + 1, row_weight)
         
-        real_index += 1
-        if real_index % n == 0: row_weight += 1
+        table[index] = max(col_weight, row_weight)
+        # print(row_weight, col_weight, table)
+        if col_weight == n: row_weight += 1
+        col_weight = col_weight%n + 1
         
     return table
 
@@ -21,7 +21,7 @@ def make_table(n,left,right):
 #     answer = make_table(n)
 #     return answer[left:right + 1]
 
-# def make_table(n): # 1차원 배열 전체 [1~n] * n 초기화 후 특정 인덱스의 값 수정 -> 시간초과 + 런타임 에러
+# def make_table(n): # 시도2: 1차원 배열 전체 [1~n] * n 초기화 후 특정 인덱스의 값 수정 -> 시간초과 + 런타임 에러
     # table = [i+1 for i in range(n)] * n
     
     # for i in range(n):
