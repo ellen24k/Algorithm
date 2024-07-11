@@ -10,4 +10,4 @@ on
 where
     ins.ANIMAL_ID is null
 order by
-    ins.ANIMAL_ID;
+    outs.ANIMAL_ID;
