@@ -32,4 +32,3 @@ def solution(maps):
     count = bfs(maps, len(maps), len(maps[0]), visited)
     print(count[-1][-1])
     return count[-1][-1] if count[-1][-1] else -1
-#todo list index 범위 확인
