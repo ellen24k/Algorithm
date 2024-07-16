@@ -25,6 +25,7 @@ def solution(n, edge):
         graph[i[0]].append(i[1])
         graph[i[1]].append(i[0])
     # print(graph)
+    #	[[], [3, 2], [3, 1, 4, 5], [6, 4, 2, 1], [3, 2], [2], [3]]
     
     distance = bfs(graph,1,visited)
     # print(distance)
