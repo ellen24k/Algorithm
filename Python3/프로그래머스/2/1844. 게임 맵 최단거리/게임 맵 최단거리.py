@@ -1,7 +1,7 @@
 from collections import deque
 
 def bfs(graph,n,m, visited):
-    queue = deque([[0, 0]]) # [0,0],[1,1]
+    queue = deque([[0, 0]])
     visited[0][0] = 1
     
     x_weight = [0,1,0,-1] # 하->우->상->좌 순으로 이동하기 위한 가중치
@@ -9,7 +9,7 @@ def bfs(graph,n,m, visited):
     
     while queue:
         [cur_x,cur_y] = queue.popleft()
-        # print(cur_x, cur_y, graph[cur_x][cur_y]) # 주석처리
+        # print(cur_x, cur_y, graph[cur_x][cur_y])
         for i in range(4):
             temp_x = cur_x + x_weight[i] # 이동하려는 좌표
             temp_y = cur_y + y_weight[i]
