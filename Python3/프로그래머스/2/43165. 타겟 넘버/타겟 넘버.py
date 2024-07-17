@@ -10,7 +10,7 @@ def bfs(graph, length, target):
         if index + 1 < length: # 아직 graph에 계산해야 할 원소가 남아있는 경우
             queue.append([index+1, value+graph[index+1]])
             queue.append([index+1, value-graph[index+1]])
-        elif value == target: method_count += 1 # 계산해야 할 원소가 없는 경우 value가 target이면 주어진 숫자를 만드는 방법
+        elif value == target: method_count += 1 # 계산해야 할 원소가 없는 경우 value가 target이면 주어진 숫자를 만드는 방법임
         # print(queue)
         
     return method_count
