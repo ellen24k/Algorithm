@@ -1,8 +1,8 @@
 from collections import deque
 
 def bfs(begin, target, words, used):
-    # [시작 단어, visited에서 시작 단어의 인덱스] ->['hit', 0]
-    queue = deque([[begin,0]]) 
+    # [시작 단어, visited에서 시작 단어의 인덱스] -> ['hit', 0]
+    queue = deque([[begin,-1]]) 
 
     while(queue):
         [word, index] = queue.popleft()
@@ -14,7 +14,7 @@ def bfs(begin, target, words, used):
                 for j in range(len(word)): # 다른 글자 개수 확인
                     if word[j] != words[i][j]:
                         dif_count += 1
-                    # print("dif:",dif_count)
+                # print("dif:",dif_count)
                 if dif_count == 1: # 한 글자만 달라야 변환 가능
                     queue.append([words[i],i])
                     used[i] = used[index] + 1
