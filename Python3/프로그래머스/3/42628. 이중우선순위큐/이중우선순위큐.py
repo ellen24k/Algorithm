@@ -14,5 +14,6 @@ def solution(operations):
                 heapq.heappop(heap) # 최솟값 삭제
         # print(heap)
             
+            
     if len(heap) > 0 : return [heapq.nlargest(1,heap)[0],heap[0]]
     else: return [0,0]
