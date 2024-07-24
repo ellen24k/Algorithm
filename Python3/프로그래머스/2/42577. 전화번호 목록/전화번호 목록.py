@@ -1,4 +1,4 @@
-def solution(phone_book):
+def solution(phone_book): # set 이용 성공
     phone_set = set(phone_book)
     
     for phone_num in phone_book:
@@ -8,7 +8,7 @@ def solution(phone_book):
     return True
 
 # def solution(phone_book): # 효율성 시간초과
-#     phone_book.sort(key=lambda x: len(x))
+    # phone_book.sort(key=lambda x: len(x))
 #     # print(phone_book)
     
 #     for i in range(len(phone_book)-1):
