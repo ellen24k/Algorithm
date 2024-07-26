@@ -1,4 +1,4 @@
-def solution(n, works): # 
+def solution(n, works): # 성공
     answer = 0
     works.sort(reverse = True)
     # print(works)
@@ -20,3 +20,22 @@ def solution(n, works): #
         # print(work,end="")
     # print()
     return answer
+
+# import heapq
+# def solution(n, works): # 성공 but 느림 (최대 802.34ms)
+#     answer = 0
+#     work_heap = []
+#     for work in works: # max heap
+#         heapq.heappush(work_heap, (-work,work))
+        
+#     while(n > 0 and work_heap[0][1] != 0):
+#         temp = heapq.heappop(work_heap)[1] - 1
+#         heapq.heappush(work_heap, (-temp, temp))
+#         n -= 1
+        
+    
+#     for work in work_heap:
+#         answer += work[1] * work[1]
+#         # print(work,end="")
+#     # print()
+#     return answer
