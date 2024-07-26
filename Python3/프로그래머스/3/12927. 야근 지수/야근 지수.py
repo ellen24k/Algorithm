@@ -1,7 +1,7 @@
-def solution(n, works):
+def solution(n, works): # 
     answer = 0
     works.sort(reverse = True)
-    print(works)
+    # print(works)
 
     index = 0
     while(n > 0):
