@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-class Node: # 
+class Node: # Trie 사용, 성공, 정확도 18번 42.19ms / 효율성 3번 2567.71ms
     __slots__ = ['children', 'remaining_length']
     
     def __init__(self):
@@ -60,37 +60,13 @@ def solution(words, queries):
     
 
 
-# 2차 시도: words의 길이를 기준으로 딕셔너리를 만들어 문자열의 길이가 같은 경우에만 비교, 효율성 시간초과 -> 정확도 18번 31.62ms
+# 2차 시도: words의 길이를 기준으로 딕셔너리를 만들어 문자열의 길이가 같은 경우에만 비교, 효율성 시간초과 -> 정확도 18번 31.62ms / 효율성 1~3 실패패
 
 # def make_dict_by_len(list_sample):
 #     dict = {}
 #     for i in list_sample:
 #         length = len(i)
-#         if length in dict: dict[length].append(i)
-#         else: dict[length] = [i]
-#     return dict
-    
-
-# def solution(words, queries):
-#     answer = [0 for _ in range(len(queries))]
-#     words = make_dict_by_len(words)
-    
-#     for i,query in enumerate(queries):
-#         length = len(query)
-#         if length in words:
-#             startQ = query[0] == '?' # ?로 시작하는가
-#             countQ = query.count('?') if startQ else query.find('?')
-#             for word in words[length]:
-#                 if startQ:
-#                     if word.endswith(query[countQ:]):
-#                         answer[i] += 1
-#                 else:
-#                     if word.startswith(query[:countQ]):
-#                         answer[i] += 1
-        
-#     return answer
-
-# 1차 시도: 정규식 이용, 효율성 시간초과 -> 정확도 18번 613ms
+#         if패
 # import re
 
 # def solution(words, queries):
