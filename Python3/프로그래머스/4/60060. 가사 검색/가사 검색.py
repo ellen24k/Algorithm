@@ -1,4 +1,4 @@
-# 4차 시도: Trie + 길이에 따라 words 구분
+# 4차 시도: Trie + 길이에 따라 words 구분, 성공, 정확도 18번 51.44ms / 효율성 3번 1676.33ms
 
 from collections import defaultdict
 
