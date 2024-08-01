@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-class Node:
+class Node: # 
     __slots__ = ['children', 'remaining_length']
     
     def __init__(self):
