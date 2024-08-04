@@ -1,4 +1,4 @@
-# 4차 시도: Trie + 길이에 따라 words 구분, 성공, 정확도 18번 51.44ms / 효율성 3번 1676.33ms
+# 4차 시도: Trie + 길이에 따라 words 구분, 성공, 정확도 18번 29.14ms / 효율성 3번 1590.51ms
 
 from collections import defaultdict
 
@@ -7,33 +7,33 @@ class Node:
 
     def __init__(self):
         self.children = defaultdict(Node)
-        self.count = 0
+        self.count = 0 # 해당 글자까지 겹치는 단어 수
 
 class Trie:
     def __init__(self):
         self.head = Node()
 
-    def insert(self, str):
+    def insert(self, word):
         cur_node = self.head
-        for i in range(len(str)):
+        for i in range(len(word)):
             cur_node.count += 1
-            cur_node = cur_node.children[str[i]]
-        cur_node.count += 1
+            cur_node = cur_node.children[word[i]]
+        # cur_node.count += 1
 
-    def search(self, str):
+    def search(self, query):
         cur_node = self.head
 
-        for i in range(str.index('?')):
-            if str[i] not in cur_node.children: return 0
-            cur_node = cur_node.children[str[i]]
+        for i in range(query.index('?')):
+            if query[i] not in cur_node.children: return 0 # 겹치는 글자가 없음
+            cur_node = cur_node.children[query[i]]
 
         return cur_node.count
 
 
 def solution(words, queries):
-    word_len_dict = {}
-    lenQ = len(queries)
-    answer = [0 for _ in range(lenQ)]
+    word_len_dict = {} # 가사의 길이에 따른 (정/역방향 trie)
+    query_count = len(queries) # 쿼리의 수
+    answer = [0 for _ in range(query_count)]
 
     for word in words:
         length_w = len(word)
@@ -41,9 +41,9 @@ def solution(words, queries):
             word_len_dict[length_w] = (Trie(), Trie())  # (순방향, 역방향)
 
         word_len_dict[length_w][0].insert(word)
-        word_len_dict[length_w][1].insert(word[::-1])
+        word_len_dict[length_w][1].insert(word[::-1]) # 역방향 탐색을 위해 word를 뒤집어서 삽입
 
-    for i in range(lenQ):
+    for i in range(query_count):
         length_q = len(queries[i])
         if length_q in word_len_dict:
             if queries[i][0] == '?':
@@ -77,7 +77,7 @@ def solution(words, queries):
 #             cur_node.remaining_length[length - i] += 1
 #             cur_node = cur_node.children[str[i]]
 #             # print(str, cur_node.children,cur_node.remaining_length)
-#         cur_node.remaining_length[0] += 1
+#         # cur_node.remaining_length[0] += 1
     
 #     def search(self, str):
 #         cur_node = self.head
