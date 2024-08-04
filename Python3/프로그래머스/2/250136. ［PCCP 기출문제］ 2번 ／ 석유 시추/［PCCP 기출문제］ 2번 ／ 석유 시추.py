@@ -2,10 +2,11 @@ from collections import defaultdict, deque
 
 def solution(land):
     answer = [0 for _ in range(len(land[0]))]
-    visited = [[False for _ in range(len(land[0]))] for _ in range(len(land))]
+    visited = [[0 for _ in range(len(land[0]))] for _ in range(len(land))]
+    # visited = [[False for _ in range(len(land[0]))] for _ in range(len(land))]
     
     def bfs(row, col, count):
-        visited[row][col] = True
+        visited[row][col] = 1
         queue = deque([(row,col)])
         one_oil = {col}
     
@@ -22,14 +23,14 @@ def solution(land):
                 if new_row >= 0 and new_row < len(land):
                     if new_col >= 0 and new_col < len(land[0]):
                         if land[new_row][new_col] == 1 and not visited[new_row][new_col]:
-                            visited[new_row][new_col] = True
+                            visited[new_row][new_col] = 1
                             queue.append((new_row, new_col))
                             count += 1
                             if new_col not in one_oil: one_oil.add(new_col)
                         
         # print(one_oil, count)
         # for v in visited:
-        #     print(v)
+            # print(v)
     
         for col in one_oil:
             answer[col] += count
