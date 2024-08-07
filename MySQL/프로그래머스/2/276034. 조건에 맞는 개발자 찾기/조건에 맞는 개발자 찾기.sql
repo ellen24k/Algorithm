@@ -4,8 +4,6 @@ select
 from
     DEVELOPERS 
 where
-    SKILL_CODE & (select distinct CODE from SKILLCODES where NAME = 'Python') != 0
-    or
-    SKILL_CODE & (select distinct CODE from SKILLCODES where Name = 'C#') != 0
+    SKILL_CODE & (select sum(CODE) from SKILLCODES where NAME = 'Python' or NAME = 'C#') != 0
 order by
     ID;
