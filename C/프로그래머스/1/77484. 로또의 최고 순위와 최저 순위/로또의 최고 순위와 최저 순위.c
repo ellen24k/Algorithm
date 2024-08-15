@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int* solution(int lottos[], size_t lottos_len, int win_nums[], size_t win_nums_len) {
-    int* answer = (int*)malloc(2);
+    int* answer = (int*)malloc(2*sizeof(int));
     int same_num_count = 0;
     int zero_count = 0;
     
