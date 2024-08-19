@@ -36,7 +36,7 @@ int solution(int n, int k) {
     for (int i = 0, start_index = 0; i <= count; i++) {
         if (converted_num_in_char_arr[i] == '0' || i == count) {
             if (i > start_index) {
-                char length = i - start_index;
+                int length = i - start_index;
                 char sub_string[length + 1];
                 memcpy(sub_string, &converted_num_in_char_arr[start_index],length);
                 sub_string[length] = '\0';
