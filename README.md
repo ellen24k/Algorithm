@@ -9,7 +9,7 @@
 링크 추가 예정
 
 ### *Lv,3*
-링크 추가 예정
+[길 찾기 게임](https://github.com/ellen24k/Algorithm/blob/main/Python3/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42892.%E2%80%85%EA%B8%B8%E2%80%85%EC%B0%BE%EA%B8%B0%E2%80%85%EA%B2%8C%EC%9E%84/README.md)
 
 ### *Others*
 링크 추가 예정
