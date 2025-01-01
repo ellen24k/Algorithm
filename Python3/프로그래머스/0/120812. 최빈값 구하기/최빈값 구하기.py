@@ -5,7 +5,7 @@ def solution(array):
     for elem in array: freq[elem] += 1
     
     sorted_arr = sorted(set(array), key= lambda elem: -freq[elem])
-    print(sorted_arr)
+    # print(sorted_arr)
     
     if len(sorted_arr) > 1:
         return sorted_arr[0] if freq[sorted_arr[0]] > freq[sorted_arr[1]] else -1
