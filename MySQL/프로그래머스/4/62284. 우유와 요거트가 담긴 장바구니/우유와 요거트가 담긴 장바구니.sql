@@ -1,0 +1,12 @@
+-- 코드를 입력하세요
+SELECT CART_ID
+FROM (
+    SELECT CART_ID
+    FROM CART_PRODUCTS
+    WHERE NAME = 'Milk'
+    INTERSECT
+    SELECT CART_ID
+    FROM CART_PRODUCTS
+    WHERE NAME = 'Yogurt'
+) AS intersected_CART_ID
+ORDER BY CART_ID;
