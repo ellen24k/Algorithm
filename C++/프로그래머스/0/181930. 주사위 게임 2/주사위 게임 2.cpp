@@ -3,10 +3,7 @@
 using namespace std;
 
 int solution(int a, int b, int c) {
-    set<int> s; 
-    s.insert(a);
-    s.insert(b);
-    s.insert(c);
+    set<int> s{a, b, c};
     
     switch(s.size()){
         case 1:
