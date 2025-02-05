@@ -17,3 +17,6 @@ def solution(x, y, n):
                 once_in_q.append(new_num)
         
     return -1
+
+# x->y: 시간초과
+# y->x: 연산 횟수 감소
