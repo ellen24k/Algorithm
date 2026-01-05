@@ -1,4 +1,3 @@
-// https://school.programmers.co.kr/learn/courses/30/lessons/151139
 -- 코드를 입력하세요
 SELECT MONTH(START_DATE) AS MONTH, CAR_ID, COUNT(*) AS RECORDS
 FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
