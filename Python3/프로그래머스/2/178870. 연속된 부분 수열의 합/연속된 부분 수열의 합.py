@@ -11,5 +11,6 @@ def solution(sequence, k):
             start += 1
         if (curSum == k and i - start < answer[1] - answer[0]):
             answer = [start, i]
+            if (start == i): break
         
     return answer
