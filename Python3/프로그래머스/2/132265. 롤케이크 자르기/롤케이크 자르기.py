@@ -1,20 +1,18 @@
-from collections import defaultdict
+from collections import Counter
 
 def solution(topping):
     answer = 0
-    toppingTypesForOlder = set(topping)
-    toppingCntForOlder = defaultdict(int)
-    for top in topping: toppingCntForOlder[top] += 1
-        
-    toppingTypesForYounger = set()
-    toppingCntForYounger = defaultdict(int)
-    
-    for top in topping:
-        toppingCntForOlder[top] -= 1
-        if (toppingCntForOlder[top] == 0): toppingTypesForOlder.remove(top)
-        
-        toppingCntForYounger[top] += 1
-        if (toppingCntForYounger[top] == 1): toppingTypesForYounger.add(top)
-        
-        if (len(toppingTypesForOlder) == len(toppingTypesForYounger)): answer += 1
+    right = Counter(topping)
+    left = set()
+
+    for t in topping:
+        right[t] -= 1
+        if right[t] == 0:
+            del right[t]
+
+        left.add(t)
+
+        if len(left) == len(right):
+            answer += 1
+
     return answer
