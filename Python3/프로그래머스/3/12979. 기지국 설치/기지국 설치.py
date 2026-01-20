@@ -6,12 +6,11 @@ def solution(n, stations, w):
     
     while (uncovered <= n):
         if (station_idx < -1 and stations[station_idx] + w < uncovered): station_idx += 1
-        if (uncovered in stations_covering_from[station_idx]):
+        if (uncovered in stations_covering_from[station_idx]): 
             uncovered = stations[station_idx] + w + 1
         else:
             answer += 1
             uncovered += 2 * w + 1
         # print(answer, uncovered, stations_covering_from[station_idx])
-        
 
     return answer
