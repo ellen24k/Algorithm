@@ -1,6 +1,8 @@
 def solution(l, r):
     answer = []
-    for i in range(l, r + 1):
+    l_5 = ((l+4) // 5) * 5
+    
+    for i in range(l_5, r + 1, 5):
         is_05 = True
         for char in str(i):
             if char not in '05': 
