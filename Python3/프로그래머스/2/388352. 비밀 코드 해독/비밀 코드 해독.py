@@ -13,6 +13,7 @@ def solution(n, q, ans):
     nums = list(i for i in range(1, n + 1) if i not in not_ans)
     comb = combinations(nums, 5)
     
+    #  주어진 케이스에서의 정답과 확인
     for c in comb:
         available_comb = True
         
