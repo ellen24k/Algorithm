@@ -1,0 +1,6 @@
+class Solution {
+    public int solution(int n) {
+        if (Math.pow((int)Math.sqrt(n), 2) < n) return 2;
+        return 1;
+    }
+}
