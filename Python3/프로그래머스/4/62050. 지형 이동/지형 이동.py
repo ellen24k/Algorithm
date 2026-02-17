@@ -1,5 +1,6 @@
 from heapq import heappush, heappop
 
+# heap + prim
 def solution(land, height):
     n = len(land)
     visited = [[False] * n for _ in range(n)]
