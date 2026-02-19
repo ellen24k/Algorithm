@@ -1,5 +1,4 @@
 def solution(n, cores):
-    answer = 0
     left, right = 0, min(cores) * n
     
     while (left <= right):
@@ -17,5 +16,3 @@ def solution(n, cores):
         if left % core == 0:
             done += 1
             if done == n: return i + 1
-
-    return answer
