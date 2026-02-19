@@ -16,3 +16,15 @@ def solution(n, cores):
         if left % core == 0:
             done += 1
             if done == n: return i + 1
+        
+# heap을 이용한 기존 풀이
+# from heapq import heappop, heappush
+
+# def solution(n, cores):
+#     next_work = [(0, i) for i in range(len(cores))]
+    
+#     for i in range(n - 1):
+#         time, idx = heappop(next_work)
+#         heappush(next_work, (time + cores[idx], idx))
+        
+#     return heappop(next_work)[1] + 1
