@@ -1,12 +1,10 @@
 def solution(targets):
     s, e = 0, 0
-    targets.sort()
+    targets.sort(key=lambda x: x[1])
     answer = 0
     
     for target in targets:
-        s = max(s, target[0])
-        e = min(e, target[1])
-        if (e <= s): 
+        if (e <= target[0]): 
             answer += 1
             s, e = target
     return answer
