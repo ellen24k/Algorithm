@@ -1,5 +1,4 @@
 import math
-from collections import deque
 
 def solution(n, k):
     num = [i for i in range(1, n + 1)]
