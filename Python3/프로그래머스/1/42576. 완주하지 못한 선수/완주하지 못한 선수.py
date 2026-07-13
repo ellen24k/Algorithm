@@ -1,13 +1,9 @@
 from collections import Counter
 
-def solution(participant, completion): # Counter 사용
-    participant_counter = Counter(participant)
-    completion_counter = Counter(completion)
+def solution(participant, completion):
+    part_cnt = Counter(participant)
+    comp_cnt = Counter(completion)
     
-    return list(participant_counter - completion_counter)[0] # Counter끼리 빼기 가능
-
-
-# def solution(participant, completion): # 단순 리스트 반복 -> 효율성 실패
-#     for i in completion: 
-#         if i in participant: participant.remove(i)
-#     return answer
+    for part in part_cnt.items():
+        if (part[0] not in comp_cnt or part[1] != comp_cnt[part[0]]):
+            return part[0]
