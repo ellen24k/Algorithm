@@ -5,17 +5,13 @@
 def solution(n, w, num):
     num_floor = (num - 1) // w
     total_floor = (n - 1) // w
-    # if num_floor == total_floor: return 1
-    # if num_floor % 2 == 0:
     num_floor_offset = num - w * num_floor # 1~w 범위
     total_floor_offset = n - w * total_floor # 1~w 범위
-    # else:
-        # num_floor_offset = num - w * num_floor
         
     # print(f'num of floor: {num_floor} | num off: {num_floor_offset}')
     # print(f'total of floor: {total_floor} | total off: {total_floor_offset}')
     
-    # num층과 최상층 택배 쌓는 방향이 다르면(홀짝) offset(층 내에서) 합이 w+1 미만이면 택배 하나 덜 꺼내도 됨
+    # num층과 최상층 택배 쌓는 방향이 다르면(홀짝) offset(층 내에서) 합이 w 초과하면 하나 더 꺼내야 함
     # 택배 쌓는 방향이 같으면 total offset이 num offset보다 작아야 덜 꺼낼 수 있음
     up_there = total_floor - num_floor
     if num_floor % 2 == total_floor % 2: # 방향 동일
