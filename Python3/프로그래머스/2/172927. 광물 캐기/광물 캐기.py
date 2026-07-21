@@ -28,7 +28,8 @@ def solution(picks, minerals):
             chunk_cnt = 0
     if chunk_cnt:
             stresses.append(''.join(sorted(chunk)))
-    stresses.sort(key = lambda x: (x, -len(x)))
+    # 광물 채굴에 요구되는 피로도가 높고 광물량이 많은 순서대로 chunk의 피로도가 높음
+    stresses.sort(key = lambda x: (x, -len(x))) 
     
     # 피로도 높은 광물을 좋은 곡괭이로 채굴
     stress_idx = 0
